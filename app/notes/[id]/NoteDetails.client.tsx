@@ -7,10 +7,10 @@ import {useQuery} from "@tanstack/react-query";
 import * as NoteService from "@/lib/api";
 import {useParams} from "next/navigation";
 
-interface Props {
+interface NoteDetailsProps {
     initialData: Note,
 }
-const NoteDetailsClient = ({initialData}: Props) => {
+const NoteDetailsClient = ({initialData}: NoteDetailsProps) => {
 const {id} = useParams() as {id: string};
 
     const {data, isError, isLoading} = useQuery({
