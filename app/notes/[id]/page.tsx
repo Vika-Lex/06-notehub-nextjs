@@ -9,8 +9,8 @@ interface NotePageProps {
 
 const Page = async ({params}: NotePageProps) => {
 
-    const {id} = params;
-    const note = await getNoteById(id)
+    // const {id} = params;
+    const note = await getNoteById(params.id)
 
     return (
 
