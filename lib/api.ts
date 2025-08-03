@@ -60,7 +60,7 @@ export const createNote = async (note: Omit<Note, 'id' | 'createdAt' | 'updatedA
     return data;
 }
 
-export const deleteNote = async (id: number): Promise<Note> => {
+export const deleteNote = async (id: string): Promise<Note> => {
     const {data} = await axios.delete<Note>(`${API_URL}/notes/${id}`, {
         headers: {
             'Content-Type': 'application/json',

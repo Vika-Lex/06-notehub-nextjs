@@ -7,7 +7,7 @@ const Header = () => {
         <header className={css.header}>
             <div className={`container ${css.headerRow}`}>
                 <Link href='/'
-                      area-label='Home'
+                      aria-label='Home'
                 >NoteHub</Link>
 
                 <nav aria-label='Main Navigation'>
