@@ -73,7 +73,7 @@ const Notes = ({initialData}:NotesClientProps) => {
                 </Modal>
             )}
             {isLoading && <p className={css.loading}>Loading, please wait...</p>}
-            {isError && <p className={css.error}>Error loading notes</p>}
+            {isError && <p className={css.error}>Something went wrong.</p>}
             {data && data.notes && data.notes.length > 0 && (
                 <NoteList notes={data?.notes}/>
             )}
