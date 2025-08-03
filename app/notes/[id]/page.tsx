@@ -1,21 +1,21 @@
 import {getNoteById} from "@/lib/api";
 import NoteDetailsClient from "@/app/notes/[id]/NoteDetails.client";
 
-interface PageProps {
+interface NotePageProps {
     params:{
         id: string
     }
 }
 
-const Page = async ({params}: PageProps) => {
+const Page = async ({params}: NotePageProps) => {
 
     const {id} = params;
     const note = await getNoteById(id)
 
     return (
-        <>
-           <NoteDetailsClient initialData={note} />
-        </>
+
+       <NoteDetailsClient initialData={note} />
+
     );
 };
 export default Page
